@@ -6,11 +6,12 @@
 Welcome to Plate Spinning's documentation!
 ==========================================
 
-Contents:
+.. contents::
 
-.. toctree::
-   :maxdepth: 2
+Spinner
+=======
 
+.. literalinclude:: 1/bulkfood.py
 
 
 Indices and tables
