@@ -1,2 +1,0 @@
-# platespinning
-Concurrency examples

@@ -11,13 +11,60 @@ Welcome to Plate Spinning's documentation!
 Spinner
 =======
 
-.. literalinclude:: 1/bulkfood.py
+Spinner with thread
+-------------------
+
+.. literalinclude:: spinner/spinner_thread.py
+   :linenos:
 
 
-Indices and tables
-==================
+Spinner with asyncio
+--------------------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. literalinclude:: spinner/spinner_asyncio.py
+   :linenos:
+
+
+Country flags (simple versions)
+===============================
+
+
+Sequential
+----------
+
+.. literalinclude:: countries/flags.py
+   :linenos:
+
+
+``concurrent.futures.ThreadPool``
+---------------------------------
+
+.. literalinclude:: countries/flags_threadpool.py
+   :linenos:
+
+
+``asyncio``
+---------------------------------
+
+.. literalinclude:: countries/flags_asyncio.py
+   :linenos:
+
+
+Charfinder
+===============================
+
+
+TCP Charfinder (telnet UI)
+--------------------------
+
+.. literalinclude:: charfinder/tcp_charfinder.py
+   :linenos:
+
+
+HTTP Charfinder (HTML UI)
+-------------------------
+
+.. literalinclude:: charfinder/http_charfinder.py
+   :linenos:
+
 

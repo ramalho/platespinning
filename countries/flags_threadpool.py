@@ -18,12 +18,12 @@ Sample run::
 # BEGIN FLAGS_THREADPOOL
 from concurrent import futures
 
-from flags import save_flag, get_flag, show, main  # <1>
+from flags import save_flag, get_flag, show, main  # Ⓐ
 
-MAX_WORKERS = 20  # <2>
+MAX_WORKERS = 20  # Ⓑ
 
 
-def download_one(cc):  # <3>
+def download_one(cc):  # Ⓒ
     image = get_flag(cc)
     show(cc)
     save_flag(image, cc.lower() + '.gif')
@@ -31,13 +31,13 @@ def download_one(cc):  # <3>
 
 
 def download_many(cc_list):
-    workers = min(MAX_WORKERS, len(cc_list))  # <4>
-    with futures.ThreadPoolExecutor(workers) as executor:  # <5>
-        res = executor.map(download_one, sorted(cc_list))  # <6>
+    workers = min(MAX_WORKERS, len(cc_list))  # Ⓓ
+    with futures.ThreadPoolExecutor(workers) as executor:  # Ⓔ
+        res = executor.map(download_one, sorted(cc_list))  # Ⓕ
 
-    return len(list(res))  # <7>
+    return len(list(res))  # Ⓖ
 
 
 if __name__ == '__main__':
-    main(download_many)  # <8>
+    main(download_many)  # Ⓗ
 # END FLAGS_THREADPOOL

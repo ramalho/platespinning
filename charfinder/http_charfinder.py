@@ -24,10 +24,10 @@ with open(TEMPLATE_NAME) as tpl:
 template = template.replace('{links}', LINKS_HTML)
 
 # BEGIN HTTP_CHARFINDER_HOME
-def home(request):  # <1>
-    query = request.GET.get('query', '').strip()  # <2>
-    print('Query: {!r}'.format(query))  # <3>
-    if query:  # <4>
+def home(request):  # Ⓐ
+    query = request.GET.get('query', '').strip()  # Ⓑ
+    print('Query: {!r}'.format(query))  # Ⓒ
+    if query:  # Ⓓ
         descriptions = list(index.find_descriptions(query))
         res = '\n'.join(ROW_TPL.format(**vars(descr))
                         for descr in descriptions)
@@ -37,34 +37,34 @@ def home(request):  # <1>
         res = ''
         msg = 'Enter words describing characters.'
 
-    html = template.format(query=query, result=res,  # <5>
+    html = template.format(query=query, result=res,  # Ⓔ
                            message=msg)
-    print('Sending {} results'.format(len(descriptions)))  # <6>
-    return web.Response(content_type=CONTENT_TYPE, text=html) # <7>
+    print('Sending {} results'.format(len(descriptions)))  # Ⓕ
+    return web.Response(content_type=CONTENT_TYPE, text=html) # Ⓖ
 # END HTTP_CHARFINDER_HOME
 
 
 # BEGIN HTTP_CHARFINDER_SETUP
 @asyncio.coroutine
-def init(loop, address, port):  # <1>
-    app = web.Application(loop=loop)  # <2>
-    app.router.add_route('GET', '/', home)  # <3>
-    handler = app.make_handler()  # <4>
+def init(loop, address, port):  # Ⓐ
+    app = web.Application(loop=loop)  # Ⓑ
+    app.router.add_route('GET', '/', home)  # Ⓒ
+    handler = app.make_handler()  # Ⓓ
     server = yield from loop.create_server(handler,
-                                           address, port)  # <5>
-    return server.sockets[0].getsockname()  # <6>
+                                           address, port)  # Ⓔ
+    return server.sockets[0].getsockname()  # Ⓕ
 
 def main(address="127.0.0.1", port=8888):
     port = int(port)
     loop = asyncio.get_event_loop()
-    host = loop.run_until_complete(init(loop, address, port))  # <7>
+    host = loop.run_until_complete(init(loop, address, port))  # Ⓖ
     print('Serving on {}. Hit CTRL-C to stop.'.format(host))
     try:
-        loop.run_forever()  # <8>
+        loop.run_forever()  # Ⓗ
     except KeyboardInterrupt:  # CTRL+C pressed
         pass
     print('Server shutting down.')
-    loop.close()  # <9>
+    loop.close()  # Ⓘ
 
 
 if __name__ == '__main__':

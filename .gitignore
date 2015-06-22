@@ -1,5 +1,6 @@
 # LR
 .env34/
+_build/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
