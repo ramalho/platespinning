@@ -1,6 +1,7 @@
 # LR
 .env34/
 _build/
+*.sublime-*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

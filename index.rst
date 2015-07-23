@@ -15,15 +15,22 @@ Spinner with thread
 -------------------
 
 .. literalinclude:: spinner/spinner_thread.py
+   :language: Python3
    :linenos:
 
 
-Spinner with asyncio
---------------------
+Spinner with asyncio (``yield`` version)
+----------------------------------------
 
-.. literalinclude:: spinner/spinner_asyncio.py
+.. literalinclude:: spinner/spinner_yield.py
    :linenos:
 
+
+Spinner with asyncio (``await`` version)
+----------------------------------------
+
+.. literalinclude:: spinner/spinner_await.py
+   :linenos:
 
 Country flags (simple versions)
 ===============================
