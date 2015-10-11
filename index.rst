@@ -15,22 +15,24 @@ Spinner with thread
 -------------------
 
 .. literalinclude:: spinner/spinner_thread.py
-   :language: Python3
-   :linenos:
+    :language: Python3
+    :linenos:
 
 
 Spinner with asyncio (``yield`` version)
 ----------------------------------------
 
 .. literalinclude:: spinner/spinner_yield.py
-   :linenos:
+    :language: Python3
+    :linenos:
 
 
 Spinner with asyncio (``await`` version)
 ----------------------------------------
 
 .. literalinclude:: spinner/spinner_await.py
-   :linenos:
+    :language: Python3
+    :linenos:
 
 Country flags (simple versions)
 ===============================
@@ -40,21 +42,24 @@ Sequential
 ----------
 
 .. literalinclude:: countries/flags.py
-   :linenos:
+    :language: Python3
+    :linenos:
 
 
 ``concurrent.futures.ThreadPool``
 ---------------------------------
 
 .. literalinclude:: countries/flags_threadpool.py
-   :linenos:
+    :language: Python3
+    :linenos:
 
 
 ``asyncio``
 ---------------------------------
 
 .. literalinclude:: countries/flags_asyncio.py
-   :linenos:
+    :language: Python3
+    :linenos:
 
 
 Charfinder
@@ -65,13 +70,13 @@ TCP Charfinder (telnet UI)
 --------------------------
 
 .. literalinclude:: charfinder/tcp_charfinder.py
-   :linenos:
+    :language: Python3
+    :linenos:
 
 
 HTTP Charfinder (HTML UI)
 -------------------------
 
 .. literalinclude:: charfinder/http_charfinder.py
-   :linenos:
-
-
+    :language: Python3
+    :linenos:
