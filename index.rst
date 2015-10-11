@@ -11,28 +11,30 @@ Welcome to Plate Spinning's documentation!
 Spinner
 =======
 
-Spinner with thread
--------------------
+Spinner with ``threading``
+--------------------------
 
 .. literalinclude:: spinner/spinner_thread.py
     :language: Python3
     :linenos:
 
 
-Spinner with asyncio (``yield`` version)
-----------------------------------------
+Spinner with ``asyncio`` (``await`` version)
+---------------------------------------------
+
+.. literalinclude:: spinner/spinner_await.py
+    :language: Python3
+    :linenos:
+
+
+Spinner with ``asyncio`` (``yield`` version)
+---------------------------------------------
 
 .. literalinclude:: spinner/spinner_yield.py
     :language: Python3
     :linenos:
 
 
-Spinner with asyncio (``await`` version)
-----------------------------------------
-
-.. literalinclude:: spinner/spinner_await.py
-    :language: Python3
-    :linenos:
 
 Country flags (simple versions)
 ===============================
@@ -54,7 +56,15 @@ Sequential
     :linenos:
 
 
-``asyncio``
+``asyncio`` with ``async/await``
+---------------------------------
+
+.. literalinclude:: countries/flags_await.py
+    :language: Python3
+    :linenos:
+
+
+``asyncio`` with ``yield from``
 ---------------------------------
 
 .. literalinclude:: countries/flags_asyncio.py
@@ -69,7 +79,7 @@ Charfinder
 TCP Charfinder (telnet UI)
 --------------------------
 
-.. literalinclude:: charfinder/tcp_charfinder.py
+.. literalinclude:: charfinder/tcp_charfinder_await.py
     :language: Python3
     :linenos:
 
@@ -77,6 +87,6 @@ TCP Charfinder (telnet UI)
 HTTP Charfinder (HTML UI)
 -------------------------
 
-.. literalinclude:: charfinder/http_charfinder.py
+.. literalinclude:: charfinder/http_charfinder_await.py
     :language: Python3
     :linenos:
