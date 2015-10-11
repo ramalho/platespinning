@@ -1,6 +1,6 @@
 """Download flags of top 20 countries by population
 
-async/await + asyncio + aiottp version
+asyncio + aiottp version
 
 Sample run::
 
@@ -17,15 +17,17 @@ import aiohttp  # Ⓐ
 from flags import BASE_URL, save_flag, show, main  # Ⓑ
 
 
-async def get_flag(cc):  # Ⓒ
+@asyncio.coroutine  # Ⓒ
+def get_flag(cc):
     url = '{}/{cc}/{cc}.gif'.format(BASE_URL, cc=cc.lower())
-    resp = await aiohttp.request('GET', url)  # Ⓓ
-    image = await resp.read()  # Ⓔ
+    resp = yield from aiohttp.request('GET', url)  # Ⓓ
+    image = yield from resp.read()  # Ⓔ
     return image
 
 
-async def download_one(cc):  # Ⓕ
-    image = await get_flag(cc)  # Ⓖ
+@asyncio.coroutine
+def download_one(cc):  # Ⓕ
+    image = yield from get_flag(cc)  # Ⓖ
     show(cc)
     save_flag(image, cc.lower() + '.gif')
     return cc

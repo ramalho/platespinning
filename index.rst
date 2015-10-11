@@ -11,24 +11,24 @@ Welcome to Plate Spinning's documentation!
 Spinner
 =======
 
-Spinner with ``threading``
---------------------------
+``spinner_thread.py``
+---------------------
 
 .. literalinclude:: spinner/spinner_thread.py
     :language: Python3
     :linenos:
 
 
-Spinner with ``asyncio`` (``await`` version)
----------------------------------------------
+``spinner_await.py``
+--------------------
 
 .. literalinclude:: spinner/spinner_await.py
     :language: Python3
     :linenos:
 
 
-Spinner with ``asyncio`` (``yield`` version)
----------------------------------------------
+``spinner_yield.py``
+--------------------
 
 .. literalinclude:: spinner/spinner_yield.py
     :language: Python3
@@ -40,32 +40,32 @@ Country flags (simple versions)
 ===============================
 
 
-Sequential
-----------
+``flags.py``
+------------
 
 .. literalinclude:: countries/flags.py
     :language: Python3
     :linenos:
 
 
-``concurrent.futures.ThreadPool``
----------------------------------
+``flags_threadpool.py``
+-----------------------
 
 .. literalinclude:: countries/flags_threadpool.py
     :language: Python3
     :linenos:
 
 
-``asyncio`` with ``async/await``
----------------------------------
+``flags_await.py``
+------------------
 
 .. literalinclude:: countries/flags_await.py
     :language: Python3
     :linenos:
 
 
-``asyncio`` with ``yield from``
----------------------------------
+``flags_asyncio.py`` (``yield from``)
+-------------------------------------
 
 .. literalinclude:: countries/flags_asyncio.py
     :language: Python3
@@ -73,19 +73,19 @@ Sequential
 
 
 Charfinder
-===============================
+==========
 
 
-TCP Charfinder (telnet UI)
---------------------------
+``tcp_charfinder_await.py``
+---------------------------
 
 .. literalinclude:: charfinder/tcp_charfinder_await.py
     :language: Python3
     :linenos:
 
 
-HTTP Charfinder (HTML UI)
--------------------------
+``http_charfinder_await.py``
+----------------------------
 
 .. literalinclude:: charfinder/http_charfinder_await.py
     :language: Python3
