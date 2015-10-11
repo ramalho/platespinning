@@ -72,6 +72,41 @@ Country flags (simple versions)
     :linenos:
 
 
+Callback hell
+=============
+
+``hell.js``
+-----------
+
+.. literalinclude:: callback-hell/hell.js
+    :language: JavaScript
+    :linenos:
+
+
+``hell.py``
+-----------
+
+.. literalinclude:: callback-hell/hell.py
+    :language: Python3
+    :linenos:
+
+
+``escape_yield.py``
+-------------------
+
+.. literalinclude:: callback-hell/escape_yield.py
+    :language: Python3
+    :linenos:
+
+
+``escape_await.py``
+-------------------
+
+.. literalinclude:: callback-hell/escape_await.py
+    :language: Python3
+    :linenos:
+
+
 Charfinder
 ==========
 
